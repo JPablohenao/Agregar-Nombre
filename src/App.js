@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [user, setUser] = useState(['tomas', 'roma', 'juan', 'pablo'])
+
+  const handClick = () => {
+    setUser([...user, 'isma']);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
+        <a>
           Learn React
         </a>
+        <button onClick={handClick}> añadir texto </button>
+        <ul>
+          {user.map((usuario) => (
+            <li key={usuario}>{usuario}</li>
+          ))}
+        </ul>
+
       </header>
-    </div>
+    </div >
   );
 }
 
 export default App;
+//() => (console.log(user))
