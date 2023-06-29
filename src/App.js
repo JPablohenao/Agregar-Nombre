@@ -38,8 +38,6 @@ function App() {
 export default App;
 //() => (console.log(user))
 // ... (es un operador spread)
-// subir el codigo al git hub 
-// crear un input que al escribir me agregue a lista y que no se agregue a lista si ya esta 
-// que cuando agregue se borre el contenido del input 
+
 
 
